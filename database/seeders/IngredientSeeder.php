@@ -16,9 +16,9 @@ class IngredientSeeder extends Seeder
         Ingredient::truncate();
 
         $ingredients = [
-            ['name' => 'Beef', 'total_stock' => 200, 'current_stock' => 200],
-            ['name' => 'Cheese', 'total_stock' => 50, 'current_stock' => 50],
-            ['name' => 'Onion', 'total_stock' => 10, 'current_stock' => 10],
+            ['name' => 'Beef', 'total_stock' => 20000, 'current_stock' => 20000],
+            ['name' => 'Cheese', 'total_stock' => 5000, 'current_stock' => 5000],
+            ['name' => 'Onion', 'total_stock' => 1000, 'current_stock' => 1000],
         ];
 
         Ingredient::insert($ingredients);

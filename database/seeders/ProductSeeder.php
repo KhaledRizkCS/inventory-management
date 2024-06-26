@@ -18,9 +18,9 @@ class ProductSeeder extends Seeder
         $product = Product::create(['name' => 'Burger']);
 
         $product->ingredients()->sync([
-            1 => ['quantity' => 20],
-            2 => ['quantity' => 5],
-            3 => ['quantity' => 1],
+            1 => ['quantity' => 150],
+            2 => ['quantity' => 30],
+            3 => ['quantity' => 20],
         ]);
     }
 }
