@@ -13,7 +13,6 @@ class IngredientService
     {
         foreach ($products as $product) {
             foreach ($product->ingredients as $ingredient) {
-                print($product->quantity);
                 $ingredient->current_stock -= $ingredient->pivot->quantity * $product->pivot->quantity;
 
                 if($ingredient->current_stock < 0)
