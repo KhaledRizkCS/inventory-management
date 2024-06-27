@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use App\Mail\IngredientRunningLow;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Product;
 
 class Ingredient extends Model
 {
@@ -28,5 +29,10 @@ class Ingredient extends Model
                 $ingredient->save();
             }
         });
+    }
+
+    public function products(): BelongsToMany
+    {
+        return $this->belongsToMany(Product::class, 'product_ingredient')->withPivot('quantity');
     }
 }
