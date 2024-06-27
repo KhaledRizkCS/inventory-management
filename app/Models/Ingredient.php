@@ -23,7 +23,7 @@ class Ingredient extends Model
                 && !$ingredient->email_sent
             ) {
 
-                Mail::to('khaled@gmail.com')->queue(new IngredientRunningLow($ingredient));
+                Mail::to(env("VENDOR_EMAIL"))->queue(new IngredientRunningLow($ingredient));
                 $ingredient->email_sent = true;
                 $ingredient->save();
             }
